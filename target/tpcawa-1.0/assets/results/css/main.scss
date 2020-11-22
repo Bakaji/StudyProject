@@ -1,0 +1,123 @@
+@import "../../default";
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    width: 100vw;
+}
+
+@import "../../navbar";
+
+main {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        flex-basis: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            color: $mainColor;
+            font-size: 22px;
+
+            span {
+                color: $secondColor;
+                margin-left: 15px;
+            }
+        }
+
+        h2 {
+            display: flex;
+            align-items: flex-end;
+            flex-basis: 300px;
+            color: $mainColor;
+            font-size: 22px;
+
+            span {
+                color: $secondColor;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    .table-container {
+        flex: 1;
+        overflow: auto;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .header {
+        background-color: $mainColor;
+        height: 40px;
+        display: flex;
+
+        div {
+            flex: 1;
+            display: flex;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    }
+
+    tr {
+        min-height: 40px;
+        display: flex;
+        text-align: center;
+
+        td {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0;
+            cursor: pointer;
+            position: relative;
+
+            * {
+                display: inline;
+            }
+
+            &::after {
+                content: attr(data-content);
+                display: none;
+                background-color: black;
+                z-index: 2;
+                color: white;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -80%);
+                padding: 15px;
+                border-radius: 5px;
+            }
+
+            &:hover {
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            background-color: #fafafa;
+        }
+    }
+}
+
+.red {
+    color: red;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+$mainColor:#2287d5;
+$secondColor:#0f4f80;
+$lightMainColor:#2287d53b;
+$grayColor:#707070;
+
+$primaryFont:"Nunito",
+sans-serif;
+$titleFont:"Noto Sans JP",
+sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $primaryFont;
+    color: $mainColor;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+    background-color: $mainColor;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &:hover{
+        background-color: $secondColor
+    }
+}
+input{
+    border:0.5px solid $mainColor;
+    color:$mainColor
+}
+input:focus{
+    outline: $secondColor;
+    font-weight: bold;
+}

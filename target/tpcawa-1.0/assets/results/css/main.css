@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  color: #2287d5;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input[type=submit],
+input[type=button] {
+  background-color: #2287d5;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+button:hover,
+input[type=submit]:hover,
+input[type=button]:hover {
+  background-color: #0f4f80;
+}
+
+input {
+  border: 0.5px solid #2287d5;
+  color: #2287d5;
+}
+
+input:focus {
+  outline: #0f4f80;
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  width: 100vw;
+}
+
+nav {
+  transition: background-color 0.3 ease;
+  height: 50px;
+  width: 100%;
+  background-color: var(--foreground-scss-color);
+  border-bottom: 1px solid #2287d53b;
+  box-shadow: 1px 1px 8px 0.5px #2287d53b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+nav:root {
+  --background-scss-color: #2287d5;
+  --foreground-scss-color: white;
+}
+nav h1 {
+  color: var(--background-scss-color);
+  font-size: 18px;
+  flex: 1;
+}
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 100%;
+  cursor: pointer;
+}
+nav a button {
+  border-right: 1px solid #2287d53b;
+  padding: 0 15px;
+  display: block;
+  background-color: var(--foreground-scss-color);
+  font-weight: 600;
+  color: var(--background-scss-color);
+  font-size: 18px;
+  box-sizing: border-box;
+  height: 90%;
+}
+nav a button:hover {
+  background-color: var(--background-scss-color);
+  color: var(--foreground-scss-color);
+}
+nav form {
+  display: flex;
+  width: 475px;
+  justify-content: center;
+  align-content: center;
+}
+nav form input {
+  height: 35px;
+  margin-left: 15px;
+  padding-left: 15px;
+  color: var(--background-scss-color);
+  outline-color: var(--background-scss-color) !important;
+}
+nav form input[type=submit] {
+  width: 85px;
+  padding: 10px;
+  background-color: var(--background-scss-color);
+  color: var(--foreground-scss-color);
+}
+
+main {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+main header {
+  flex-basis: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main header h1 {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  color: #2287d5;
+  font-size: 22px;
+}
+main header h1 span {
+  color: #0f4f80;
+  margin-left: 15px;
+}
+main header h2 {
+  display: flex;
+  align-items: flex-end;
+  flex-basis: 300px;
+  color: #2287d5;
+  font-size: 22px;
+}
+main header h2 span {
+  color: #0f4f80;
+  margin-left: 15px;
+}
+main .table-container {
+  flex: 1;
+  overflow: auto;
+}
+main table {
+  width: 100%;
+}
+main .header {
+  background-color: #2287d5;
+  height: 40px;
+  display: flex;
+}
+main .header div {
+  flex: 1;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+main tr {
+  min-height: 40px;
+  display: flex;
+  text-align: center;
+}
+main tr td {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+main tr td * {
+  display: inline;
+}
+main tr td::after {
+  content: attr(data-content);
+  display: none;
+  background-color: black;
+  z-index: 2;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  padding: 15px;
+  border-radius: 5px;
+}
+main tr td:hover::after {
+  display: block;
+}
+main tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.red {
+  color: red;
+}
+
+/*# sourceMappingURL=main.css.map */

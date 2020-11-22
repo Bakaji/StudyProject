@@ -1,0 +1,118 @@
+@import "../default";
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  padding: 0 20px 20px;
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  grid-template-rows: 150px 1fr;
+
+  .header-holder {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+  }
+
+  section {
+    grid-row: 2/3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .redirect {
+    grid-column: 1/2;
+  }
+
+  .separator-holder {
+    grid-column: 2/3;
+    position: relative;
+  }
+
+  .admin-login {
+    grid-column: 3/4;
+  }
+}
+
+.separator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 4px;
+  border-radius: 2px;
+  background-color: $secondColor;
+}
+
+h2 {
+  color: $secondColor;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+input{
+  color: $secondColor
+}
+
+button,
+input[type='submit'] {
+  background-color: $mainColor;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  font-size: 20px;
+  height: 50px;
+  width: 250px;
+  &:disabled{
+    background-color: red;
+  }
+}
+
+.section-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redirect-buttons {
+  height: 52%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.login-form {
+  height: 65%;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  input {
+    display: block;
+    height: 50px;
+    width: 300px;
+    padding: 10px;
+    font-size: 20px;
+    border:1px solid $mainColor;
+    &:focus{
+      outline: 1px solid $secondColor;
+    }
+  }
+}
+
+form:invalid input[type='submit']{
+  background-color: red;
+  border-color: red;
+}

@@ -1,0 +1,73 @@
+nav {
+    &:root {
+        --background-scss-color: #{$mainColor};
+        --foreground-scss-color: white;
+    }
+
+    transition: background-color 0.3 ease;
+    height: 50px;
+    width: 100%;
+    background-color: var(--foreground-scss-color);
+    ;
+    border-bottom: 1px solid $lightMainColor;
+    box-shadow: 1px 1px 8px .5px $lightMainColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+
+    h1 {
+        color: var(--background-scss-color);
+        font-size: 18px;
+        flex: 1;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 100%;
+        cursor: pointer;
+
+        button {
+            border-right: 1px solid $lightMainColor;
+            padding: 0 15px;
+            display: block;
+            background-color: var(--foreground-scss-color);
+            font-weight: 600;
+            color: var(--background-scss-color);
+            font-size: 18px;
+            box-sizing: border-box;
+            height: 90%;
+
+            &:hover {
+                background-color: var(--background-scss-color);
+                color: var(--foreground-scss-color);
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        width: 475px;
+        justify-content: center;
+        align-content: center;
+
+        input {
+            height: 35px;
+            margin-left: 15px;
+            padding-left: 15px;
+            color: var(--background-scss-color);
+            outline-color: var(--background-scss-color) !important;
+
+            &[type='submit'] {
+                width: 85px;
+                padding: 10px;
+                background-color: var(--background-scss-color);
+                color: var(--foreground-scss-color);
+            }
+        }
+
+    }
+}

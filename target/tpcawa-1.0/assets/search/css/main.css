@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  color: #2287d5;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input[type=submit],
+input[type=button] {
+  background-color: #2287d5;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+button:hover,
+input[type=submit]:hover,
+input[type=button]:hover {
+  background-color: #0f4f80;
+}
+
+input {
+  border: 0.5px solid #2287d5;
+  color: #2287d5;
+}
+
+input:focus {
+  outline: #0f4f80;
+  font-weight: bold;
+}
+
+main {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+main h1 {
+  flex-basis: 150px;
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+  color: #2287d5;
+}
+main .forms-container {
+  padding-left: 150px;
+  padding-right: 150px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+main .forms-container .form-holder {
+  flex: 1;
+  align-items: center;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #2287d53b;
+  box-shadow: 1px 1px 8px 0.5px #2287d53b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+nav h1 {
+  padding-left: 0 !important;
+  font-size: 18px;
+  flex: 1;
+}
+nav form {
+  display: flex;
+  width: 475px;
+  justify-content: center;
+  align-items: center !important;
+  column-gap: 0 !important;
+}
+nav form input {
+  height: 35px;
+  margin-left: 15px;
+  padding-left: 15px;
+  opacity: 0.8;
+  color: #2287d5;
+  outline-color: #2287d5 !important;
+}
+nav form input[type=submit] {
+  width: 85px;
+  padding: 10px;
+}
+
+.form-holder {
+  position: relative;
+}
+.form-holder form {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+.form-holder form .input-holder {
+  flex: 1;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.form-holder form .input-holder input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-top: 20px;
+}
+.form-holder form .input-holder input:focus + .label-name .content-name, .form-holder form .input-holder input:valid + .label-name .content-name {
+  transform: translateY(-120%);
+  color: #2287d5;
+  font-size: 15px;
+}
+.form-holder form .input-holder input:focus + .label-name::after, .form-holder form .input-holder input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+.form-holder form .input-holder label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #707070;
+}
+.form-holder form .input-holder label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: -1px;
+  left: 0px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid #2287d5;
+  border-radius: 1px;
+  transform: translateX(-100%);
+}
+.form-holder form .input-holder label .content-name {
+  position: absolute;
+  bottom: 5px;
+  color: #707070;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.form-holder form .submit-container {
+  flex-basis: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.form-holder form .submit-container input[type=submit] {
+  width: 100px;
+  height: 40px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,74 @@
+@import "../default";
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+form {
+  width: 100%;
+
+  table {
+    width: 100%;
+  }
+}
+
+.btn-container {
+  float: right;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+tr {
+  height: 50px;
+  padding: 0;
+}
+
+tr.text-field{
+  height: 150px;
+}
+
+input, textarea {
+  display: inline-block;
+  height: 35px;
+  border: $mainColor 1px solid;
+  padding-left: 15px;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  outline-color: $secondColor;
+}
+
+input[type="submit"], input[type="button"] {
+  width: 70px;
+  padding: 0;
+}
+
+.text-field {
+  height: 130px;
+
+  textarea {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+input.danger {
+  background-color: red;
+}
